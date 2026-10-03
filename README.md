@@ -37,9 +37,8 @@ Source code: [github.com/Superhero123634-hub/Hostel-Panchayat](https://github.co
 
 ## How to view this resume
 
-- **Online:** open the website link shown on this repository's page.
-- **On your computer:** download this repository and double-click `index.html`. It opens in any modern browser, with no installation needed.
-
+- **Online:** open the website link shown on this repository's page, or click https://superhero123634.github.io/resume-site/ for more updates !
+- 
 ## Built with
 
 Plain HTML, CSS and JavaScript. There are no frameworks, so the site is light and loads quickly. It works on phones, tablets and computers, and it can be printed.
