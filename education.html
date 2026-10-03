@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Education — Raghav Pathak</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1e2a3a;--mute:#5d6b7c;--acc:#4f7fa3;--ice:#eef4f9;--line:#d9e4ee}
+*{box-sizing:border-box;margin:0}
+html,body{min-height:100%;background:#fff;color:var(--ink);font:300 clamp(15px,1.45vw,18px)/1.85 Inter,system-ui,sans-serif}
+.serif,h1,h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500}
+body{opacity:0;animation:in 1.2s ease forwards}
+body.leaving{animation:none;opacity:0;transition:opacity .6s ease}
+@keyframes in{to{opacity:1}}
+/* entry page */
+.entry{min-height:100vh;background:radial-gradient(circle at 50% 38%,#f1f7fc,#fff 65%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;padding:2rem}
+.crest{position:relative;width:clamp(130px,22vmin,190px);aspect-ratio:1;display:grid;place-items:center;animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.crest .ring{position:absolute;inset:0;border-radius:50%;border:1px solid var(--acc);opacity:.7}
+.crest .ring.o{inset:-14px;border-color:var(--line);opacity:1}
+.crest svg{width:60%}
+#role{display:flex;align-items:center;gap:.7rem;margin-top:2rem;height:1.6rem;font-size:.75rem;letter-spacing:.32em;text-transform:uppercase;color:var(--acc);font-weight:500;transition:opacity .9s}
+#role.out{opacity:0}
+#role svg{width:18px;height:18px;fill:none;stroke:var(--acc);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.entry h1{font-size:clamp(2.6rem,8vw,5.8rem);line-height:1.05;margin:1.4rem 0 .5rem}
+.entry small{color:var(--mute);letter-spacing:.25em;font-size:.7rem;text-transform:uppercase;animation:soft 3.5s ease-in-out infinite}
+@keyframes soft{50%{opacity:.35}}
+/* content pages */
+.page{min-height:100vh;padding:10vh 9vw 14vh;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.5fr);gap:6vw;align-content:center;align-items:center;background:linear-gradient(160deg,#fff 40%,var(--ice))}
+.l .n{font-size:.72rem;letter-spacing:.35em;color:var(--acc);text-transform:uppercase}
+.l h2{font-size:clamp(2rem,4.6vw,3.6rem);line-height:1.12;margin-top:1rem}
+.l::after{content:"";display:block;width:56px;height:1px;background:var(--acc);margin-top:1.6rem;transform-origin:left;animation:line 1.6s ease .5s both}
+@keyframes line{from{transform:scaleX(0)}}
+.r p{color:#35445a;margin-bottom:1.1rem;max-width:40rem}
+.rise{opacity:0;transform:translateY(14px);animation:rise 1.5s ease forwards;animation-delay:calc(var(--d,0)*.35s + .5s)}
+@keyframes rise{to{opacity:1;transform:none}}
+.chips{margin-top:1.4rem}
+.chips span{display:inline-block;margin:.25rem .35rem .25rem 0;padding:.3rem 1rem;border:1px solid var(--line);border-radius:99px;background:#fff;font-size:.8rem;color:var(--mute)}
+a.btn{display:inline-block;margin:1.2rem 1rem 0 0;padding:.75rem 1.7rem;border:1px solid var(--acc);color:var(--acc);text-decoration:none;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;transition:.4s;background:#fff}
+a.btn:hover{background:var(--acc);color:#fff}
+#bar{position:fixed;top:0;left:0;height:2px;background:var(--acc);z-index:10}
+.hud{position:fixed;z-index:10;bottom:calc(1.2rem + env(safe-area-inset-bottom,0px));left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:0 5vw}
+.hud a.nv{background:#fff;border:1px solid var(--line);color:var(--ink);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;text-decoration:none;transition:.4s}
+.hud a.nv:hover{border-color:var(--acc);color:var(--acc)}
+.hud a.nv.off{visibility:hidden}
+.hud .mid{font-size:.72rem;letter-spacing:.25em;color:var(--mute);text-decoration:none}
+@media(max-width:760px){.page{grid-template-columns:1fr;gap:1.5rem;align-content:start;padding-top:12vh}}
+@media print{.hud,#bar{display:none}.page{page-break-after:always}body,.rise{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}body,.rise{opacity:1;transform:none}}
+</style></head>
+<body data-i="2" data-n="8">
+<div id="bar"></div>
+<main class="page"><div class="l"><div class="n">02 · Education</div><h2>A steady learner.</h2></div>
+<div class="r"><p class="rise" style="--d:0">I scored 85% in my Class 10 board examinations and am now in Class 12. Living and studying at the Gurukul has taught me to manage my time, respect routine, and stay focused even when there are distractions around me.</p><p class="rise" style="--d:1">Alongside my school subjects, I spend my free time learning to code, because I enjoy understanding how things work and then building them myself.</p></div></main>
+<nav class="hud"><a class="nv" rel="prev" href="about.html" aria-label="Previous">←</a><a class="mid" href="index.html">02 / 08</a><a class="nv" rel="next" href="responsibility.html" aria-label="Next">→</a></nav>
+<script>
+// Content pages: progress bar, keyboard + swipe navigation, soft page fade
+const b=document.body,idx=+b.dataset.i,tot=+b.dataset.n;
+document.getElementById('bar').style.width=(idx/tot*100)+'%';
+const prev=document.querySelector('a[rel=prev]'),next=document.querySelector('a[rel=next]');
+function nav(a){if(!a||a.classList.contains('off'))return;b.classList.add('leaving');setTimeout(()=>location.href=a.getAttribute('href'),600)}
+document.querySelectorAll('.hud a').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();nav(a)}));
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown'].includes(e.key))nav(next);if(['ArrowLeft','PageUp'].includes(e.key))nav(prev)});
+let x0=null;addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+addEventListener('touchend',e=>{if(x0===null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>70)nav(d<0?next:prev);x0=null});
+</script></body></html>
